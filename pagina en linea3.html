@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultoría En linea Servicios Profesionales | CONTPAQi</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; text-align: center; background-color: #f4f7f6; color: #333; }
+        header { background: #004a99; color: white; padding: 2.5rem; }
+        .logo-img { max-height: 90px; margin-bottom: 10px; }
+        .container { max-width: 900px; margin: 20px auto; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        
+        /* Sección de Servicios */
+        .services-grid { display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin: 30px 0; }
+        .service-card { background: #fff; border-top: 4px solid #004a99; padding: 20px; width: 250px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .service-card h3 { color: #004a99; font-size: 1.2rem; margin-bottom: 10px; }
+        .service-card p { font-size: 0.9rem; color: #666; line-height: 1.4; }
+
+        /* Formulario de Contacto */
+        .contact-box { background: #eef2f7; padding: 25px; border-radius: 10px; margin-top: 30px; }
+        input[type="text"] { width: 85%; padding: 15px; margin: 15px 0; border: 2px solid #cbd5e0; border-radius: 8px; font-size: 1rem; }
+        
+        .btn-whatsapp { 
+            background: #25d366; color: white; padding: 18px 35px; text-decoration: none; border-radius: 50px; 
+            font-weight: bold; display: inline-block; cursor: pointer; border: none; font-size: 1.1rem; transition: transform 0.2s;
+        }
+        .btn-whatsapp:hover { transform: scale(1.05); background: #1ebe57; }
+        footer { margin-top: 40px; padding: 20px; font-size: 0.8rem; color: #888; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logotipo" class="logo-img">
+        <h1>Consultoría de Sistemas En Línea</h1>
+        <p>Más de 20 años de experiencia impulsando empresas</p>
+    </header>
+
+    <div class="services-grid">
+    <!-- Bloque 1: Implementación -->
+    <div class="service-card">
+        <h3>Implementación</h3>
+        <p>Instalación, migración y configuración de toda la suite CONTPAQi desde cero, asegurando el cumplimiento fiscal.</p>
+    </div>
+
+    <!-- Bloque 2: Soporte Técnico -->
+    <div class="service-card">
+        <h3>Soporte Técnico</h3>
+        <p>Corrección de errores, recuperación de bases de datos, actualizaciones urgentes y pólizas de mantenimiento.</p>
+    </div>
+
+    <!-- Bloque 3: Asesoría Fiscal-Digital -->
+    <div class="service-card">
+        <h3>Asesoría Fiscal-Digital</h3>
+        <p>Capacitación para el uso correcto del sistema, timbrado de nómina, CFDI 4.0 y contabilidad electrónica.</p>
+    </div>
+</div>
+        <div class="contact-box">
+            <h3>¿Listo para optimizar tu empresa?</h3>
+            <p>Introduce tu nombre para agendar tu **Auditoría Gratuita**:</p>
+            <input type="text" id="nombreCliente" placeholder="Escribe tu nombre completo...">
+            <br>
+            <button onclick="enviarWhatsApp()" class="btn-whatsapp">📲 Solicitar por WhatsApp</button>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Consultoría En linea Servicios Profesionales - Tonalá, Jalisco.
+    </footer>
+
+    <script>
+        function enviarWhatsApp() {
+            var nombre = document.getElementById('nombreCliente').value;
+            var telefono = "5213311015156"; // REEMPLAZA CON TU NÚMERO
+            
+            if(nombre.trim() === "") {
+                alert("Por favor, escribe tu nombre para personalizar la solicitud.");
+                return;
+            }
+
+            var mensaje = "Hola En linea Servicios Profesionales, mi nombre es " + nombre + ". Vi tu página y me interesa la auditoría gratuita de mis sistemas.";
+            var url = "https://wa.me/" + telefono + "?text=" + encodeURIComponent(mensaje);
+            window.open(url, '_blank');
+        }
+    </script>
+
+</body>
+</html>
